@@ -1,8 +1,9 @@
 import { Link, NavLink as RNavLink, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { Menu, X, Sparkles } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import logo from "@/assets/logo.jpg";
 
 const links = [
   { to: "/", label: "Home" },
@@ -37,9 +38,7 @@ export const Navbar = () => {
     >
       <nav className="container flex items-center justify-between h-16 md:h-20">
         <Link to="/" className="flex items-center gap-2 group">
-          <div className="w-9 h-9 rounded-2xl gradient-warm grid place-items-center shadow-warm group-hover:scale-110 transition-transform">
-            <Sparkles className="w-4 h-4 text-primary-foreground" />
-          </div>
+          <img src={logo} alt="Mom Solution 360 logo" className="w-10 h-10 rounded-2xl object-cover shadow-warm group-hover:scale-110 transition-transform" />
           <span className="font-display text-lg font-bold leading-tight">
             Mom Solution <span className="text-gradient">360</span>
           </span>

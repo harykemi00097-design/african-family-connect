@@ -1,6 +1,6 @@
 import { Section, SectionHeading, Eyebrow } from "@/components/Section";
 import { Button } from "@/components/ui/button";
-import { Mail, MessageCircle, Instagram, Facebook, Youtube, Calendar, BarChart3, Mailbox, Bot, Send } from "lucide-react";
+import { Mail, MessageCircle, Instagram, Youtube, Calendar, BarChart3, Mailbox, Bot, Send, ShoppingBag } from "lucide-react";
 import { toast } from "sonner";
 import { FormEvent } from "react";
 
@@ -68,15 +68,22 @@ const Contact = () => {
             <div className="p-6 rounded-3xl bg-card border border-border">
               <h4 className="font-bold">Reach out directly</h4>
               <ul className="mt-3 space-y-2 text-sm">
-                <li className="flex items-center gap-2"><Mail className="w-4 h-4 text-primary" /> hello@momsolution360.com</li>
-                <li className="flex items-center gap-2"><MessageCircle className="w-4 h-4 text-primary" /> WhatsApp: +234 800 000 0000</li>
+                <li><a href="mailto:momsolution360@gmail.com" className="flex items-center gap-2 hover:text-primary"><Mail className="w-4 h-4 text-primary" /> momsolution360@gmail.com</a></li>
+                <li><a href="https://wa.me/2348036337597" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-primary"><MessageCircle className="w-4 h-4 text-primary" /> WhatsApp: +234 803 633 7597</a></li>
               </ul>
               <div className="mt-4 flex gap-2">
-                {[Instagram, Facebook, Youtube].map((I, i) => (
-                  <button key={i} className="w-10 h-10 rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground grid place-items-center transition">
-                    <I className="w-4 h-4" />
-                  </button>
-                ))}
+                <a href="https://www.instagram.com/momssolution360?igsh=MXc2NzBqeXE3dnQyZg==" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-10 h-10 rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground grid place-items-center transition">
+                  <Instagram className="w-4 h-4" />
+                </a>
+                <a href="https://www.youtube.com/@momsolutions360tv7" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="w-10 h-10 rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground grid place-items-center transition">
+                  <Youtube className="w-4 h-4" />
+                </a>
+                <a href="https://wa.me/2348036337597" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="w-10 h-10 rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground grid place-items-center transition">
+                  <MessageCircle className="w-4 h-4" />
+                </a>
+                <a href="https://selar.com/87111cm670" target="_blank" rel="noopener noreferrer" aria-label="Selar store" className="w-10 h-10 rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground grid place-items-center transition">
+                  <ShoppingBag className="w-4 h-4" />
+                </a>
               </div>
             </div>
           </aside>
