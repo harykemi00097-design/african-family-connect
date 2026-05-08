@@ -2,104 +2,128 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Mom Solution 360 — Warm African Earth Tone Design System
+   All colors MUST be HSL. */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 36 40% 97%;
+    --foreground: 24 30% 14%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 36 50% 99%;
+    --card-foreground: 24 30% 14%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 36 50% 99%;
+    --popover-foreground: 24 30% 14%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Terracotta / clay */
+    --primary: 16 70% 48%;
+    --primary-foreground: 36 50% 99%;
+    --primary-glow: 22 85% 62%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Warm cream */
+    --secondary: 36 45% 92%;
+    --secondary-foreground: 24 30% 18%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 34 30% 93%;
+    --muted-foreground: 24 14% 38%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Saffron / gold accent */
+    --accent: 38 80% 56%;
+    --accent-foreground: 24 30% 14%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Sage green for trust */
+    --sage: 140 22% 42%;
+    --sage-foreground: 36 50% 99%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 36 50% 99%;
 
-    --radius: 0.5rem;
+    --border: 30 25% 86%;
+    --input: 30 25% 88%;
+    --ring: 16 70% 48%;
 
-    --sidebar-background: 0 0% 98%;
+    --radius: 1rem;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Gradients */
+    --gradient-warm: linear-gradient(135deg, hsl(16 70% 48%), hsl(38 80% 56%));
+    --gradient-sunset: linear-gradient(135deg, hsl(22 85% 62%) 0%, hsl(38 80% 56%) 50%, hsl(48 88% 70%) 100%);
+    --gradient-soft: linear-gradient(180deg, hsl(36 45% 96%) 0%, hsl(34 30% 93%) 100%);
+    --gradient-hero: linear-gradient(120deg, hsl(16 60% 18% / 0.85) 0%, hsl(16 70% 30% / 0.55) 60%, hsl(38 80% 56% / 0.25) 100%);
 
-    --sidebar-primary: 240 5.9% 10%;
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(16 60% 30% / 0.12);
+    --shadow-warm: 0 20px 50px -20px hsl(16 70% 48% / 0.45);
+    --shadow-glow: 0 0 60px hsl(38 80% 56% / 0.35);
 
-    --sidebar-primary-foreground: 0 0% 98%;
+    --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
 
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 36 40% 97%;
+    --sidebar-foreground: 24 30% 14%;
+    --sidebar-primary: 16 70% 48%;
+    --sidebar-primary-foreground: 36 50% 99%;
+    --sidebar-accent: 36 45% 92%;
+    --sidebar-accent-foreground: 24 30% 14%;
+    --sidebar-border: 30 25% 86%;
+    --sidebar-ring: 16 70% 48%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --background: 24 24% 8%;
+    --foreground: 36 30% 94%;
+    --card: 24 22% 11%;
+    --card-foreground: 36 30% 94%;
+    --popover: 24 22% 11%;
+    --popover-foreground: 36 30% 94%;
+    --primary: 22 85% 62%;
+    --primary-foreground: 24 24% 8%;
+    --primary-glow: 38 80% 56%;
+    --secondary: 24 18% 16%;
+    --secondary-foreground: 36 30% 94%;
+    --muted: 24 18% 16%;
+    --muted-foreground: 36 14% 64%;
+    --accent: 38 80% 56%;
+    --accent-foreground: 24 24% 8%;
+    --sage: 140 22% 50%;
+    --sage-foreground: 24 24% 8%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 36 30% 94%;
+    --border: 24 18% 20%;
+    --input: 24 18% 20%;
+    --ring: 22 85% 62%;
+    --sidebar-background: 24 24% 8%;
+    --sidebar-foreground: 36 30% 94%;
+    --sidebar-primary: 22 85% 62%;
+    --sidebar-primary-foreground: 24 24% 8%;
+    --sidebar-accent: 24 18% 16%;
+    --sidebar-accent-foreground: 36 30% 94%;
+    --sidebar-border: 24 18% 20%;
+    --sidebar-ring: 22 85% 62%;
   }
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "ss01", "cv11";
+  }
+  h1, h2, h3, h4, h5 { @apply font-display tracking-tight; }
+}
+
+@layer utilities {
+  .gradient-warm { background: var(--gradient-warm); }
+  .gradient-sunset { background: var(--gradient-sunset); }
+  .gradient-soft { background: var(--gradient-soft); }
+  .gradient-hero { background: var(--gradient-hero); }
+  .shadow-soft { box-shadow: var(--shadow-soft); }
+  .shadow-warm { box-shadow: var(--shadow-warm); }
+  .shadow-glow { box-shadow: var(--shadow-glow); }
+  .text-gradient {
+    background: var(--gradient-warm);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
 }
