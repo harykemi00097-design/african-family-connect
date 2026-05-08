@@ -1,8 +1,12 @@
-import { Outlet, ScrollRestoration } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import { Navbar } from "./Navbar";
 import { Footer } from "./Footer";
 
 export const SiteLayout = () => {
+  const { pathname } = useLocation();
+  useEffect(() => { window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior }); }, [pathname]);
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -10,7 +14,6 @@ export const SiteLayout = () => {
         <Outlet />
       </main>
       <Footer />
-      <ScrollRestoration />
     </div>
   );
 };
