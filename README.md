@@ -45,7 +45,7 @@ The project uses Git and GitHub for source code management.
 Typical development workflow:
 
 1. Pull the latest changes from GitHub.
-2. Create or modify application code locally.
+2. Create or modify application code locally.githhh
 3. Test the application.
 4. Review changes with Git.
 5. Commit changes with descriptive commit messages.
