@@ -18,7 +18,7 @@ export const Footer = () => {
             <Mail className="w-4 h-4" /> momsolution360@gmail.com
           </a>
           <div className="mt-5 flex flex-wrap gap-2">
-            <a href="https://wa.me/2348036337597" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="w-10 h-10 grid place-items-center rounded-full bg-background/10 border border-background/15 hover:bg-primary hover:text-primary-foreground transition">
+            <a href="https://wa.me/2348036337497" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="w-10 h-10 grid place-items-center rounded-full bg-background/10 border border-background/15 hover:bg-primary hover:text-primary-foreground transition">
               <MessageCircle className="w-4 h-4" />
             </a>
             <a href="https://www.instagram.com/momssolution360?igsh=MXc2NzBqeXE3dnQyZg==" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-10 h-10 grid place-items-center rounded-full bg-background/10 border border-background/15 hover:bg-primary hover:text-primary-foreground transition">
@@ -56,7 +56,7 @@ export const Footer = () => {
           <ul className="space-y-2 text-sm text-background/70">
             <li><Link to="/community" className="hover:text-background">Community Hub</Link></li>
             <li><Link to="/contact" className="hover:text-background">Coaching</Link></li>
-            <li><a href="https://wa.me/2348036337597" target="_blank" rel="noopener noreferrer" className="hover:text-background">WhatsApp</a></li>
+            <li><a href="https://wa.me/2348036337497" target="_blank" rel="noopener noreferrer" className="hover:text-background">WhatsApp</a></li>
             <li><a href="https://www.instagram.com/momssolution360?igsh=MXc2NzBqeXE3dnQyZg==" target="_blank" rel="noopener noreferrer" className="hover:text-background">Instagram</a></li>
             <li><a href="https://www.youtube.com/@momsolutions360tv7" target="_blank" rel="noopener noreferrer" className="hover:text-background">YouTube</a></li>
             <li><a href="https://selar.com/87111cm670" target="_blank" rel="noopener noreferrer" className="hover:text-background">Selar Store</a></li>
